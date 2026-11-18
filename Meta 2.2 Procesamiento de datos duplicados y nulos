@@ -1,0 +1,81 @@
+# Meta 2.2 Procesamiento de datos duplicados y nulos
+# Carlos Rene Lopez Cervantes
+# 07-Noviembre-2026
+
+
+import pandas as pd
+df = pd.read_csv("ventas.csv")
+print(df)
+
+# 1. Realizar una función que reciba como parámetro un DataFrame y  retorne el porcentaje de valores nulos de cada columna.
+def porcentaje_nulos(df:pd.DataFrame):
+    nulos = df.isna().mean()*100
+    print(nulos)
+
+# 2. Realizar una función que reciba como parámetro un DataFrame y retorne el número de renglones duplicados.
+def renglones_duplicados(df:pd.DataFrame):
+    duplicados = df.duplicated().sum()
+    print("Numero de renglones duplicados: ",duplicados)
+
+# Realizar una función que reciba como parámetro un DataFrame y un máximo porcentaje. Este debe eliminar todas las columnas que superen o igualen el máximo porcentaje de valores nulos establecidos en el DataFrame Original. Retornar la lista nombres de columnas eliminadas.  Validar que el porcentaje máximo esté entre 0 y 1.
+def borrar_columnas(df, maximo):
+    if not 0 <= maximo <= 1:
+        raise ValueError("El máximo debe estar entre 0 y 1")
+
+    proporciones = df.isna().mean()
+    columnas_eliminadas = proporciones[proporciones >= maximo].index.tolist()
+
+    df.drop(columns=columnas_eliminadas, inplace=True)
+    return columnas_eliminadas
+
+
+# Realizar una función que reciba como parámetro un DataFrame, una lista con los nombres de las columnas a verificar y una cadena. La cadena solo puede ser mean, bfill o ffill, en caso contrario lanzar una excepción. Debe sustituir los valores nulos por el método especificado y retornar el DataFrame modificado.
+def sustituir_nulos(df:pd.DataFrame, columnas, metodo):
+    if metodo not in ("mean", "bfill", "ffill"):
+        raise ValueError("El método debe ser mean, bfill o ffill")
+
+    df_modificado = df.copy()
+
+    for columna in columnas:
+        if metodo == "mean":
+            promedio = df_modificado[columna].mean()
+            df_modificado[columna] = df_modificado[columna].fillna(promedio)
+        elif metodo == "bfill":
+            df_modificado[columna] = df_modificado[columna].bfill()
+        else:
+            df_modificado[columna] = df_modificado[columna].ffill()
+
+    return df_modificado
+
+# Realizar una función que reciba como parámetro un DataFrame y elimine los renglones repetidos en el DataFrame Original. Debe retornar la cantidad de renglones eliminados.
+def eliminar_renglones_duplicados(df:pd.DataFrame):
+    cantidad_antes = len(df)
+    df.drop_duplicates(inplace=True)
+    cantidad_eliminados = cantidad_antes - len(df)
+    return cantidad_eliminados
+
+
+
+if __name__ == '__main__':
+    print("===================================================================================================================")
+    porcentaje_nulos(df)
+    print("===================================================================================================================")
+    renglones_duplicados(df)
+    print("===================================================================================================================")
+    df_prueba = df.copy()
+    columnas_eliminadas = borrar_columnas(df_prueba, 0.5)
+
+    print("Columnas eliminadas:", columnas_eliminadas)
+    print("===================================================================================================================")
+    print("Cantidad de columnas eliminadas:", len(columnas_eliminadas))
+    print("===================================================================================================================")
+    print("Columnas aún existentes:", df_prueba.columns.tolist())
+    print("===================================================================================================================")
+    print(df_prueba)
+    print("===================================================================================================================")
+    df_prueba_4 = sustituir_nulos(df, ["unidades", "precio_unitario"], "mean")
+    print(df_prueba_4)
+    print("===================================================================================================================")
+    df_prueba_5 = df.copy()
+    print("Renglones eliminados:", eliminar_renglones_duplicados(df_prueba_5))
+    print(df_prueba_5)
