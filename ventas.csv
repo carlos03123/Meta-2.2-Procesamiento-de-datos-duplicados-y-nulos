@@ -1,0 +1,37 @@
+id_venta,cliente,ciudad,producto,categoria,unidades,precio_unitario,descuento_pct,ingreso_mensual,calificacion,canal_venta,comentario,codigo_promocional
+1001,Ana,Tijuana,Mouse,Electronica,2.0,320.0,0.0,12000.0,5.0,Web,Bueno,PROMO1
+1002,Luis,Mexicali,Teclado,Electronica,1.0,650.0,5.0,18000.0,4.0,Tienda,,
+1003,Marta,Ensenada,Taza,Hogar,3.0,140.0,,,5.0,App,Entrega rapida,
+1004,Pedro,Tecate,Lampara,Hogar,1.0,480.0,10.0,15000.0,,Web,,
+1005,Sofia,Rosarito,Mochila,Accesorios,,760.0,0.0,22000.0,4.0,,Buen precio,
+1006,Diego,Tijuana,Libreta,Papeleria,5.0,85.0,,,3.0,Tienda,,
+1007,Elena,Mexicali,Termo,Accesorios,2.0,,5.0,14000.0,5.0,App,,PROMO2
+1008,Rene,Ensenada,Audifonos,Electronica,1.0,899.0,15.0,,,Web,Bueno,
+1009,Julia,Tecate,Mouse,Electronica,4.0,320.0,,19000.0,4.0,Tienda,,
+1010,Omar,Rosarito,Teclado,Electronica,2.0,650.0,0.0,11000.0,3.0,,,
+1011,Carla,Tijuana,Taza,Hogar,,140.0,5.0,,5.0,App,Entrega rapida,
+1012,Pablo,Mexicali,Lampara,Hogar,3.0,,10.0,25000.0,4.0,Web,,
+1013,Nora,Ensenada,Mochila,Accesorios,1.0,760.0,,16000.0,,Tienda,Bueno,PROMO3
+1014,Ivan,Tecate,Libreta,Papeleria,6.0,85.0,0.0,,3.0,App,,
+1015,Lilia,Rosarito,Termo,Accesorios,2.0,390.0,5.0,21000.0,5.0,,,
+1016,Raul,Tijuana,Audifonos,Electronica,1.0,899.0,,17000.0,4.0,Web,Buen precio,
+1017,Diana,Mexicali,Mouse,Electronica,3.0,,10.0,,2.0,Tienda,,
+1018,Tomas,Ensenada,Teclado,Electronica,,650.0,0.0,13000.0,5.0,App,Bueno,
+1019,Alicia,Tecate,Taza,Hogar,4.0,140.0,,24000.0,4.0,Web,,PROMO4
+1020,Bruno,Rosarito,Lampara,Hogar,2.0,480.0,5.0,,,Tienda,,
+1021,Irene,Tijuana,Mochila,Accesorios,1.0,760.0,10.0,20000.0,5.0,App,Entrega rapida,
+1022,Marco,Mexicali,Libreta,Papeleria,8.0,85.0,,10000.0,3.0,,,
+1023,Sara,Ensenada,Termo,Accesorios,2.0,,0.0,,4.0,Web,Bueno,
+1024,Hugo,Tecate,Audifonos,Electronica,1.0,899.0,15.0,27000.0,5.0,Tienda,,
+1025,Olga,Rosarito,Mouse,Electronica,,320.0,,12000.0,,App,,PROMO1
+1026,Jorge,Tijuana,Teclado,Electronica,2.0,650.0,5.0,,4.0,Web,Buen precio,
+1027,Eva,Mexicali,Taza,Hogar,3.0,140.0,0.0,18000.0,5.0,,,
+1028,Noe,Ensenada,Lampara,Hogar,1.0,480.0,,23000.0,3.0,Tienda,,
+1029,Vera,Tecate,Mochila,Accesorios,2.0,760.0,10.0,,4.0,App,Bueno,
+1030,Alex,Rosarito,Termo,Accesorios,4.0,390.0,5.0,16000.0,5.0,Web,Entrega rapida,PROMO2
+1003,Marta,Ensenada,Taza,Hogar,3.0,140.0,,,5.0,App,Entrega rapida,
+1008,Rene,Ensenada,Audifonos,Electronica,1.0,899.0,15.0,,,Web,Bueno,
+1012,Pablo,Mexicali,Lampara,Hogar,3.0,,10.0,25000.0,4.0,Web,,
+1018,Tomas,Ensenada,Teclado,Electronica,,650.0,0.0,13000.0,5.0,App,Bueno,
+1024,Hugo,Tecate,Audifonos,Electronica,1.0,899.0,15.0,27000.0,5.0,Tienda,,
+1030,Alex,Rosarito,Termo,Accesorios,4.0,390.0,5.0,16000.0,5.0,Web,Entrega rapida,PROMO2
